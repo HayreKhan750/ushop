@@ -1,25 +1,24 @@
-import logo from './logo.svg';
-import './App.css';
+import { Routes, Route } from "react-router-dom";
+import "./App.css";
+import { HomePage } from "./pages/homepage/homepage";
+import React, { Component } from "react";
+import ShopPage from "./pages/shop/shop-page";
+import { Header } from "./components/header/header";
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+class App extends Component {
+  state = {};
+  render() {
+    return (
+      <div>
+        <Header />
+        <Routes>
+          <Route path="/" element={<HomePage />} />
+          <Route path="/shop" element={<ShopPage />} />
+          <Route path="*" element={<h1>404 Page Not Found 🚫</h1>} />
+        </Routes>
+      </div>
+    );
+  }
 }
 
 export default App;

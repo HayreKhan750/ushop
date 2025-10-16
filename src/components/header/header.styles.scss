@@ -1,0 +1,117 @@
+.header {
+  height: 70px;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 25px;
+
+  .logo-container {
+    height: 100%;
+    width: 70px;
+    padding: 25px;
+  }
+
+  .options {
+    width: 50%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+
+    .option {
+      padding: 10px 15px;
+    }
+  }
+}
+
+// .header {
+//   height: 70px;
+//   width: 100%;
+//   display: flex;
+//   justify-content: space-between;
+//   align-items: center; // vertically center everything
+//   padding: 0 40px;
+//   background-color: #ffffff;
+//   box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+
+//   .logo-container {
+//     display: flex;
+//     align-items: center;
+//     height: 100%;
+//     cursor: pointer;
+//     text-decoration: none;
+//     gap: 8px;
+
+//     .logo {
+//       height: 45px;
+//       width: auto;
+//       transition: transform 0.3s ease, filter 0.3s ease;
+//       filter: brightness(0) saturate(100%) invert(9%) sepia(92%) saturate(7451%)
+//         hue-rotate(208deg) brightness(95%) contrast(96%);
+//     }
+
+//     .logo-text {
+//       font-size: 42px;
+//       font-weight: 800;
+//       letter-spacing: 1px;
+//       color: #1e88e5;
+//       text-transform: uppercase;
+//       line-height: 1;
+//       display: flex;
+//       align-items: center;
+//       transition: transform 0.3s ease, filter 0.3s ease;
+//       filter: brightness(0) saturate(100%) invert(9%) sepia(92%) saturate(7451%)
+//         hue-rotate(208deg) brightness(95%) contrast(96%);
+//     }
+
+//     &:hover {
+//       .logo,
+//       .logo-text {
+//         transform: scale(1.08);
+//         filter: brightness(0) saturate(100%) invert(38%) sepia(92%)
+//           saturate(3625%) hue-rotate(211deg) brightness(97%) contrast(96%);
+//       }
+//     }
+//   }
+
+//   .options {
+//     display: flex;
+//     align-items: center;
+//     justify-content: flex-end;
+//     gap: 30px;
+
+//     .option {
+//       position: relative;
+//       font-size: 18px;
+//       font-weight: 600;
+//       color: #333;
+//       text-decoration: none;
+//       letter-spacing: 0.5px;
+//       transition: color 0.3s ease;
+
+//       // underline animation
+//       &::after {
+//         content: "";
+//         position: absolute;
+//         bottom: -5px;
+//         left: 0;
+//         height: 2px;
+//         width: 0;
+//         background-color: #1e88e5;
+//         transition: width 0.3s ease;
+//       }
+
+//       &:hover {
+//         color: #1e88e5;
+
+//         &::after {
+//           width: 100%;
+//         }
+//       }
+
+//       &:active {
+//         color: #1565c0;
+//       }
+//     }
+//   }
+// }

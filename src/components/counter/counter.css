@@ -1,0 +1,102 @@
+/* Counter Container */
+.counter-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(135deg, #4e73df, #1cc88a);
+  padding: 30px;
+  border-radius: 16px;
+  width: 300px;
+  margin: 40px auto;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+}
+.counter-container {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin: 10px 0;
+}
+
+.btn {
+  min-width: 50px;
+  font-size: 18px;
+}
+
+.btn-secondary {
+  font-weight: bold;
+  cursor: default;
+}
+
+/* Reset Button */
+.btn-reset {
+  display: block;
+  margin: 0 auto 20px auto;
+  padding: 10px 20px;
+  background: #f6c23e;
+  border: none;
+  border-radius: 6px;
+  font-size: 16px;
+  color: #fff;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.btn-reset:hover {
+  background: #dda20a;
+}
+
+/* Display */
+.counter-display h1 {
+  font-size: 4rem;
+  color: #fff;
+  margin-bottom: 20px;
+}
+
+/* Buttons Container */
+.counter-buttons {
+  display: flex;
+  gap: 15px;
+}
+
+/* Buttons */
+.btn {
+  padding: 10px 20px;
+  font-size: 20px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: transform 0.2s ease, background 0.3s ease;
+}
+
+/* Primary Button */
+.btn-primary {
+  background: #36b9cc;
+  color: #fff;
+}
+
+.btn-primary:hover {
+  background: #2c9faf;
+  transform: scale(1.05);
+}
+
+/* Danger Button */
+.btn-danger {
+  background: #e74a3b;
+  color: #fff;
+}
+
+.btn-danger:hover {
+  background: #c0392b;
+  transform: scale(1.05);
+}
+.counter-container {
+  display: flex;
+  align-items: center; /* vertically center */
+  gap: 10px; /* space between items */
+}
+
+.counter-value {
+  font-size: 1.5rem;
+  font-weight: bold;
+}
