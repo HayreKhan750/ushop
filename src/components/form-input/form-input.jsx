@@ -1,4 +1,3 @@
-import React, { Component } from "react";
 import "./form-input.styles.scss";
 
 export const FormInput = ({ handleChange, label, ...otherProps }) => {

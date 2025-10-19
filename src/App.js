@@ -5,20 +5,36 @@ import React, { Component } from "react";
 import ShopPage from "./pages/shop/shop-page";
 import { Header } from "./components/header/header";
 import SignInSignUpPage from "./pages/sign-in-sign-up/sign-in-sign-up";
-import { auth } from "./components/firebase/firebase";
+import {
+  auth,
+  createUserProfileDocument,
+} from "./components/firebase/firebase";
 
 class App extends Component {
   state = {
     currentUser: null,
-    unsubscribeFromAuth: null,
   };
 
+  unsubscribeFromAuth = null;
   componentDidMount() {
-    auth.onAuthStateChanged((user) => {
-      this.setState({ currentUser: user });
+    this.unsubscribeFromAuth = auth.onAuthStateChanged(async (userAuth) => {
+      if (userAuth) {
+        // Get user document reference
+        const userRef = await createUserProfileDocument(userAuth);
 
-      console.log(user.displayName);
-      console.log(user.email);
+        // Listen to changes on the user document
+        userRef.onSnapshot((snapShot) => {
+          this.setState({
+            currentUser: {
+              id: snapShot.id,
+              ...snapShot.data(),
+            },
+          });
+        });
+      } else {
+        // If user logs out
+        this.setState({ currentUser: null });
+      }
     });
   }
   componentWillUnmount() {
