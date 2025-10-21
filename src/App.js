@@ -10,9 +10,11 @@ import {
   createUserProfileDocument,
   firestore,
 } from "./components/firebase/firebase";
+import { createStructuredSelector } from "reselect";
 
 import { connect } from "react-redux";
 import { setCurrentUser } from "./redux/user/user.action";
+import { selectCurrentUser } from "./redux/cart/cart.selector";
 class App extends Component {
   unsubscribeFromAuth = null;
   componentDidMount() {
@@ -65,8 +67,16 @@ class App extends Component {
   }
 }
 
-const mapStateToProps = (state) => ({
-  currentUser: state.user.currentUser,
+// const mapStateToProps = (state) => ({
+//   currentUser: state.user.currentUser,
+// });
+
+// const mapStateToProps = (state) => ({
+//   currentUser: selectCurrentUser(state),
+// });
+
+const mapStateToProps = createStructuredSelector({
+  currentUser: selectCurrentUser,
 });
 
 const mapDispatchToProps = (dispatch) => ({
