@@ -1,0 +1,14 @@
+import sections from "../../components/directory/directory.data";
+
+const initialState = {
+  sections: sections,
+};
+
+const directoryReducer = (state = initialState, action) => {
+  switch (action.type) {
+    default:
+      return state;
+  }
+};
+
+export default directoryReducer;
