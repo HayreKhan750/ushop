@@ -1,0 +1,30 @@
+.stripe-button {
+  margin-top: 20px;
+  display: inline-block;
+
+  button {
+    background-color: #4285f4;
+    color: white;
+    font-size: 16px;
+    font-weight: 600;
+    padding: 12px 24px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    text-transform: uppercase;
+    transition: all 0.3s ease;
+
+    &:hover {
+      background-color: #357ae8;
+    }
+
+    &:active {
+      transform: scale(0.98);
+    }
+
+    &:disabled {
+      background-color: #a0a0a0;
+      cursor: not-allowed;
+    }
+  }
+}
